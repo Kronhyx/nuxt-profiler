@@ -4,61 +4,7 @@
 
     <ToolbarTime></ToolbarTime>
 
-    <div class="sf-toolbar-block sf-toolbar-block-ajax sf-toolbar-status-normal" style="display: none;">
-      <div class="sf-toolbar-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill="#AAA"
-                d="M9.8 18L6 22.4c-.3.3-.8.4-1.1 0L1 18c-.4-.5-.1-1 .5-1H3V6.4C3 3.8 5.5 2 8.2 2h3.9c1.1 0 2 .9 2 2s-.9 2-2 2H8.2C7.7 6 7 6 7 6.4V17h2.2c.6 0 1 .5.6 1zM23 6l-3.8-4.5a.8.8 0 0 0-1.1 0L14.2 6c-.4.5-.1 1 .5 1H17v10.6c0 .4-.7.4-1.2.4h-3.9c-1.1 0-2 .9-2 2s.9 2 2 2h3.9c2.6 0 5.2-1.8 5.2-4.4V7h1.5c.6 0 .9-.5.5-1z" />
-        </svg>
-
-        <span class="sf-toolbar-value sf-toolbar-ajax-request-counter">0</span>
-      </div>
-      <div class="sf-toolbar-info">
-        <div class="sf-toolbar-info-piece">
-          <b class="sf-toolbar-ajax-info">0 AJAX requests</b>
-        </div>
-        <div class="sf-toolbar-info-piece">
-          <table class="sf-toolbar-ajax-requests">
-            <thead>
-            <tr>
-              <th>Method</th>
-              <th>Type</th>
-              <th>Status</th>
-              <th>URL</th>
-              <th>Time</th>
-              <th>Profile</th>
-            </tr>
-            </thead>
-            <tbody class="sf-toolbar-ajax-request-list" />
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="sf-toolbar-block sf-toolbar-block-form sf-toolbar-status-normal ">
-      <a href="https://flexy.ftwo.local/_profiler/3346c2?panel=form">
-        <div class="sf-toolbar-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#AAA"
-                  d="M20.5 4H18V2.5c0-.8-.7-1.5-1.5-1.5h-9C6.7 1 6 1.7 6 2.5V4H3.5C2.7 4 2 4.7 2 5.5v16c0 .8.7 1.5 1.5 1.5h17c.8 0 1.5-.7 1.5-1.5v-16c0-.8-.7-1.5-1.5-1.5zM9 4h6v1H9V4zm10 16H5V7h1.1c.2.6.8 1 1.4 1h9c.7 0 1.2-.4 1.4-1H19v13zm-2-9c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1zm0 3c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1zm-4 3c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h4c.6 0 1 .4 1 1z" />
-          </svg>
-
-          <span class="sf-toolbar-value">
-          1
-        </span>
-        </div>
-      </a>
-      <div class="sf-toolbar-info">
-        <div class="sf-toolbar-info-piece">
-          <b>Number of forms</b>
-          <span class="sf-toolbar-status">1</span>
-        </div>
-        <div class="sf-toolbar-info-piece">
-          <b>Number of errors</b>
-          <span class="sf-toolbar-status sf-toolbar-status-">0</span>
-        </div>
-      </div>
-    </div>
+    <ToolbarForm></ToolbarForm>
 
     <div class="sf-toolbar-block sf-toolbar-block-logger sf-toolbar-status-yellow ">
       <a href="https://flexy.ftwo.local/_profiler/3346c2?panel=logger">
@@ -485,9 +431,10 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 import ToolbarRequest from './toolbar/request.vue'
 import ToolbarTime from './toolbar/time.vue'
+import ToolbarForm from './toolbar/form.vue'
 import Logo from './Logo.vue'
 
-@Component({components: { ToolbarRequest, ToolbarTime, Logo }})
+@Component({components: { ToolbarRequest, ToolbarTime, ToolbarForm, Logo }})
 export default class Toolbar extends Vue {
 
 }
