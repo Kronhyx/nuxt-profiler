@@ -1,7 +1,7 @@
 <template>
   <ToolbarMask>
     <template #default>
-      <MaskLabel class="block">200</MaskLabel>
+      <span class="block">200</span>
       <MaskValue>@</MaskValue>
       <MaskLabel>{{ $route.name }}</MaskLabel>
     </template>

@@ -1,11 +1,8 @@
 <template>
-  <div class="sf-toolbar-block sf-toolbar-block-request">
+  <div class="sf-toolbar-block" :class="variantClass">
     <a href="https://flexy.ftwo.local/_profiler/3346c2?panel=request">
       <div class="sf-toolbar-icon">
         <slot></slot>
-        <span class="sf-toolbar-value sf-toolbar-info-piece-additional">
-          <slot name="value">slot value</slot>
-        </span>
       </div>
     </a>
     <div class="sf-toolbar-info">
@@ -17,28 +14,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component({})
 export default class ToolbarMask extends Vue {
+  @Prop({ default: null, type: String }) readonly variant!: string
 
-  get routeName() {
-    return this.$route.name
+  get variantClass() {
+    return `status status-${this.variant}`
   }
-
 }
 </script>
 
 <style lang="scss" scoped>
-
-.sf-toolbar-block {
-  cursor: default;
-  display: block;
-  float: left;
-  height: 36px;
-  margin-right: 0;
-  white-space: nowrap;
-}
 
 .status {
   color: #FFF;

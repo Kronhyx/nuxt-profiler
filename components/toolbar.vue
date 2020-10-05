@@ -1,55 +1,8 @@
 <template>
-  <div id="sfToolbarMainContent-3346c2" class="sf-toolbarreset clear-fix" data-no-turbolink="" style="display: block;">
+  <div class="sf-toolbarreset clear-fix" style="display: block;">
     <ToolbarRequest></ToolbarRequest>
 
-    <div class="sf-toolbar-block sf-toolbar-block-time sf-toolbar-status-yellow ">
-      <a href="https://flexy.ftwo.local/_profiler/3346c2?panel=time">
-        <div class="sf-toolbar-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#AAA"
-                  d="M15.1 4.3a13 13 0 0 0-6.2 0c-.3 0-.7-.2-.7-.5v-.4c0-1.2 1-2.3 2.3-2.3h3c1.2 0 2.3 1 2.3 2.3v.3c0 .4-.4.6-.7.6zm5.8 9.7a9 9 0 0 1-17.8 0 9 9 0 0 1 17.8 0zm-4.2 1c0-.6-.4-1-1-1H13V8.4c0-.6-.4-1-1-1s-1 .4-1 1v6.2c0 .6.4 1.3 1 1.3h3.7c.5.1 1-.3 1-.9z" />
-          </svg>
-
-          <span class="sf-toolbar-value">7780</span>
-          <span class="sf-toolbar-label">ms</span>
-        </div>
-      </a>
-      <div class="sf-toolbar-info" style="left: 0px;">
-        <div class="sf-toolbar-info-piece">
-          <b>Total time</b>
-          <span>7780 ms</span>
-        </div>
-        <div class="sf-toolbar-info-piece">
-          <b>Initialization time</b>
-          <span>596 ms</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="sf-toolbar-block sf-toolbar-block-time sf-toolbar-status-yellow ">
-      <a href="https://flexy.ftwo.local/_profiler/3346c2?panel=time">
-        <div class="sf-toolbar-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#AAA"
-                  d="M6 18.9V15h12v3.9c0 .7-.2 1.1-1 1.1H7c-.8 0-1-.4-1-1.1zM20 1c-.6 0-1 .5-1 1.1v18c0 .5-.4.9-.9.9H5.9a.9.9 0 0 1-.9-.9v-18C5 1.5 4.6 1 4 1c-.5 0-1 .5-1 1.1v18C3 21.7 4.3 23 5.9 23h12.2c1.6 0 2.9-1.3 2.9-2.9v-18c0-.6-.4-1.1-1-1.1zm-2 8H6v5h12V9z" />
-          </svg>
-
-          <span class="sf-toolbar-value">51.8</span>
-          <span class="sf-toolbar-label">MB</span>
-        </div>
-      </a>
-      <div class="sf-toolbar-info" style="left: 0px;">
-        <div class="sf-toolbar-info-piece">
-          <b>Peak memory usage</b>
-          <span>51.8 MB</span>
-        </div>
-
-        <div class="sf-toolbar-info-piece">
-          <b>PHP memory limit</b>
-          <span>512 MB</span>
-        </div>
-      </div>
-    </div>
+    <ToolbarTime></ToolbarTime>
 
     <div class="sf-toolbar-block sf-toolbar-block-ajax sf-toolbar-status-normal" style="display: none;">
       <div class="sf-toolbar-icon">
@@ -443,16 +396,10 @@
 
     <div class="sf-toolbar-block sf-toolbar-block-config sf-toolbar-status-normal sf-toolbar-block-right" title="">
       <a href="https://flexy.ftwo.local/_profiler/3346c2?panel=config">
-        <div class="sf-toolbar-icon">                    <span class="sf-toolbar-label">
-                                                                                                                                  <svg
-                                                                                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                                                                                    width="24"
-                                                                                                                                    height="24"
-                                                                                                                                    viewBox="0 0 24 24"><path
-                                                                                                                                    fill="#AAA"
-                                                                                                                                    d="M12 .9C5.8.9.9 5.8.9 12a11 11 0 1 0 22.2 0A11 11 0 0 0 12 .9zm6.5 6c-.6 0-.9-.3-.9-.8 0-.2 0-.4.2-.6l.2-.4c0-.3-.5-.4-.6-.4-1.8.1-2.3 2.5-2.7 4.4l-.2 1c1 .2 1.8 0 2.2-.3.6-.4-.2-.7-.1-1.2.1-.3.5-.5.7-.6.5 0 .7.5.7.9 0 .7-1 1.8-3 1.8l-.6-.1-.6 2.4c-.4 1.6-.8 3.8-2.4 5.7-1.4 1.7-2.9 1.9-3.5 1.9-1.2 0-1.9-.6-2-1.5 0-.8.7-1.3 1.2-1.3.6 0 1.1.5 1.1 1s-.2.6-.4.6c-.1.1-.3.2-.3.4 0 .1.1.3.4.3.5 0 .8-.3 1.1-.5 1.2-.9 1.6-2.7 2.2-5.7l.1-.7.7-3.2c-.8-.6-1.3-1.4-2.4-1.7-.6-.1-1.1.1-1.5.5-.4.5-.2 1.1.2 1.5l.7.6c.7.8 1.2 1.6 1 2.5-.3 1.5-2 2.6-4 1.9-1.8-.6-2-1.8-1.8-2.5.2-.6.6-.7 1.1-.6.5.2.6.7.6 1.2l-.1.3c-.2.1-.3.3-.3.4-.1.4.4.6.7.7.7.3 1.6-.2 1.8-.8a1 1 0 0 0-.4-1.1l-.7-.8c-.4-.4-1.1-1.4-.7-2.6.1-.5.4-.9.7-1.3a4 4 0 0 1 2.8-.6c1.2.4 1.8 1.1 2.6 1.8.5-1.2 1-2.4 1.8-3.5.9-.9 1.9-1.6 3.1-1.7 1.3.2 2.2.7 2.2 1.6 0 .4-.2 1.1-.9 1.1z" /></svg>
-
-                                                                                                                                </span>
+        <div class="sf-toolbar-icon">
+          <span class="sf-toolbar-label">
+            <Logo/>
+          </span>
           <span class="sf-toolbar-value">3.4.37</span>
         </div>
       </a>
@@ -537,8 +484,10 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import ToolbarRequest from './toolbar/request.vue'
+import ToolbarTime from './toolbar/time.vue'
+import Logo from './Logo.vue'
 
-@Component({components: { ToolbarRequest }})
+@Component({components: { ToolbarRequest, ToolbarTime, Logo }})
 export default class Toolbar extends Vue {
 
 }
